@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<robot name="macroed" xmlns:xacro="http://ros.org/wiki/xacro">
+
+ <xacro:arg name="vesselcolor" default="0 0.8 0 1"/> 
+ <xacro:arg name="vesselid" default="titoneri1"/> 
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.8 0 0 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0 0.8 0 1"/>
+  </material>
+
+  <material name="yellow">
+    <color rgba="0.8 0.8 0 1"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="1 0.55 0 1"/>
+  </material>
+
+  <material name="purple">
+    <color rgba="0.8 0 0.8 1"/>
+  </material>
+
+  <material name="lightblue">
+    <color rgba="0 0.8 0.8 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+<!-- Default inertial parameters to use intil parameters are specified -->
+
+  <xacro:macro name="default_inertial" params="mass">
+    <inertial>
+      <mass value="${mass}" />
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+    </inertial>
+  </xacro:macro>
+
+<!-- The hull of the ship -->
+  <link name="$(arg vesselid)_base_link">
+    <visual>
+      <origin xyz="-0.470 -0.165 0.170" rpy="${-pi/2} 0 0"/>
+      <geometry>
+         <mesh filename="package://ras_urdf_common/meshes/TN_hull_BB_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="vesselcolor">
+        <color rgba="$(arg vesselcolor)"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.510 0.165 0.140" rpy="${-pi/2} 0 ${pi}"/>
+      <geometry>
+      <!-- This is a coarse outline of the vessel, giving simple and intuitive base collision -->
+        <mesh filename="package://ras_urdf_common/meshes/TN_collisionMesh1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+<!-- Macro for making azimuth thrusters link and joint-->
+  <xacro:macro name="aft_thruster" params="prefix reflect">
+    <link name="$(arg vesselid)_${prefix}_aft_thruster">
+      <visual>
+        <origin xyz="-0.108 -0.087 0.125" rpy="${-pi/2} 0 0" />
+        <geometry>
+          <mesh filename="package://ras_urdf_common/meshes/TN_propeller1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual> 
+      <collision>
+        <origin xyz="0 0 0.07" rpy="0 0 0" />
+        <geometry>
+          <box size="0.08 0.08 0.12"/>
+        </geometry> 
+      </collision>
+      <xacro:default_inertial mass="0.01"/>
+    </link>
+
+    <joint name="$(arg vesselid)_${prefix}_aft_thruster_joint" type="revolute">
+      <axis xyz="0 0 1" rpy="0 0 0" />
+      <limit effort="1000" lower="-2.356" upper="2.356" velocity="2.0"/>
+      <parent link="$(arg vesselid)_base_link"/>
+      <child link="$(arg vesselid)_${prefix}_aft_thruster"/>
+      <origin xyz="${-0.405} ${reflect*0.075} 0" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+
+<!-- Using the macro to make the thrusters -->
+<xacro:aft_thruster prefix="SB" reflect="1.0"/>
+<xacro:aft_thruster prefix="PS" reflect="-1.0"/>
+
+</robot>
