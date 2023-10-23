@@ -1,0 +1,194 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 70
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Purple Ship1
+        - /Purple Ship1/Status1
+        - /TF1
+        - /TF1/Status1
+      Splitter Ratio: 0.5
+    Tree Height: 443
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RAS_TN_DB/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        RAS_TN_DB_PS_aft_thruster:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RAS_TN_DB_SB_aft_thruster:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RAS_TN_DB_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Darkblue Ship
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 0.800000011920929
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /RAS_TN_PU/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        RAS_TN_PU_PS_aft_thruster:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RAS_TN_PU_SB_aft_thruster:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RAS_TN_PU_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Purple Ship
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        RAS_TN_DB_PS_aft_thruster:
+          Value: true
+        RAS_TN_DB_SB_aft_thruster:
+          Value: true
+        RAS_TN_DB_base_link:
+          Value: true
+        RAS_TN_PU_PS_aft_thruster:
+          Value: true
+        RAS_TN_PU_SB_aft_thruster:
+          Value: true
+        RAS_TN_PU_base_link:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          RAS_TN_DB_base_link:
+            {}
+          RAS_TN_PU_base_link:
+            {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 9.234321594238281
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 1.1919147968292236
+        Y: 1.9468662738800049
+        Z: 1.0394582748413086
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: true
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.4549998641014099
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 5.738164901733398
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1043
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000374000003b9fc0200000002fb000000100044006900730070006c006100790073010000003d0000023e000000c900fffffffb0000000a00560069006500770073010000028100000175000000a400ffffff00000406000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 0
