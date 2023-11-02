@@ -79,7 +79,5 @@ def generate_launch_description():
 
     ld.add_action(robot_state_publisher_node1)
     ld.add_action(robot_state_publisher_node2)
-    #ld.add_action(robot_state_publisher_node3)
-    #ld.add_action(robot_state_publisher_node4)
 
     return ld
