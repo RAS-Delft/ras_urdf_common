@@ -143,11 +143,10 @@ class ras_ships_actuation_to_joint_state_broadcaster(Node):
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
         if SHIP_TYPE == ShipType.TitoNeri:
-            azi_ps = msg.data[3]
-            azi_sb = msg.data[4]
-            joint_state_msg.name = [VESSEL_ID+'_SB_aft_thruster_joint', VESSEL_ID+'_PS_aft_thruster_joint']
-            joint_state_msg.position = [azi_ps, azi_sb]
-            joint_state_msg.velocity = []
+            joint_state_msg.name = [VESSEL_ID+'_SB_aft_thruster_propeller',VESSEL_ID+'_PS_aft_thruster_propeller',VESSEL_ID+'_BOW_thruster_propeller',VESSEL_ID+'_SB_aft_thruster_joint', VESSEL_ID+'_PS_aft_thruster_joint']
+            print(str(type(joint_state_msg.position)))
+            joint_state_msg.position = [np.nan,np.nan,np.nan,msg.data[3], msg.data[4]]
+            joint_state_msg.velocity = [msg.data[0],msg.data[1],msg.data[2],np.nan,np.nan]
             joint_state_msg.effort = []
         elif SHIP_TYPE == ShipType.Delfia:
             print('[joint state broadcaster]: Delfia ship type not implemented yet')
