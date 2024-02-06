@@ -111,7 +111,7 @@ class ras_ships_actuation_to_joint_state_broadcaster(Node):
         self.statustimer = self.create_timer(STATUS_TIMER_PERIOD, self.status_callback)
         if PERIOD_INACTIVITY_BROADCAST > 0.0:
             self.inactivity_timer = self.create_timer(PERIOD_INACTIVITY_BROADCAST, self.inactivity_callback)
-        self.status_actuation_counter = 0
+        self.status_publish_jointstate_counter = 0
 
         # Send one initial message to give zero angle as starting pose of thrusters (otherwise the robot state publisher will not publish the tf2 transform)
         #self.joint_state_publisher.publish(zero_jointstate_msg(self.get_clock().now().to_msg()))
@@ -133,7 +133,7 @@ class ras_ships_actuation_to_joint_state_broadcaster(Node):
         self.last_msg_timestamp = self.last_prio_msg_timestamp
 
     def pub_jointstate(self, msg:Float32MultiArray):
-        self.status_actuation_counter += 1
+        self.status_publish_jointstate_counter += 1
         # Create joint state message
 
         # Joint names:
@@ -162,16 +162,16 @@ class ras_ships_actuation_to_joint_state_broadcaster(Node):
     def status_callback(self):
 
         # Calculate rate
-        actuation_rate = self.status_actuation_counter / STATUS_TIMER_PERIOD
+        jointstate_rate = self.status_publish_jointstate_counter / STATUS_TIMER_PERIOD
         
         # Convert to strings
-        printstring = display_tools.terminal_fleet_module_string(VESSEL_ID, ['actuation_rate',actuation_rate,'hz'])
+        printstring = display_tools.terminal_fleet_module_string(VESSEL_ID, ['jointstate_rate',jointstate_rate,'hz'])
 
         # Print
         self.get_logger().info(printstring)
 
         # Reset trackers
-        self.status_actuation_counter = 0
+        self.status_publish_jointstate_counter = 0
 
 def main(args=None):
     rclpy.init(args=args)
