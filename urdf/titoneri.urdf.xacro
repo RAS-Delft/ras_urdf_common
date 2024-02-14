@@ -50,7 +50,7 @@
   </xacro:macro>
 
 <!-- The hull of the ship -->
-  <link name="$(arg vesselid)_base_link">
+  <link name="base_link">
     <visual>
       <origin xyz="-0.470 -0.165 0.170" rpy="${-pi/2} 0 0"/>
       <geometry>
@@ -71,7 +71,7 @@
 
 <!-- Macro for making azimuth thrusters link and joint-->
   <xacro:macro name="aft_thruster" params="prefix reflect">
-    <link name="$(arg vesselid)_${prefix}_aft_thruster">
+    <link name="${prefix}_aft_thruster">
       <visual>
         <origin xyz="-0.108 -0.087 0.125" rpy="${-pi/2} 0 0" />
         <geometry>
@@ -88,11 +88,11 @@
       <xacro:default_inertial mass="0.01"/>
     </link>
 
-    <joint name="$(arg vesselid)_${prefix}_aft_thruster_joint" type="revolute">
+    <joint name="${prefix}_aft_thruster_joint" type="revolute">
       <axis xyz="0 0 1" rpy="0 0 0" />
       <limit effort="1000" lower="-2.356" upper="2.356" velocity="2.0"/>
-      <parent link="$(arg vesselid)_base_link"/>
-      <child link="$(arg vesselid)_${prefix}_aft_thruster"/>
+      <parent link="base_link"/>
+      <child link="${prefix}_aft_thruster"/>
       <origin xyz="${-0.405} ${reflect*0.075} 0" rpy="0 0 0"/>
     </joint>
   </xacro:macro>
