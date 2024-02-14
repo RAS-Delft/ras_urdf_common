@@ -2,7 +2,6 @@
 <robot name="macroed" xmlns:xacro="http://ros.org/wiki/xacro">
 
  <xacro:arg name="vesselcolor" default="0 0.8 0 1"/> 
- <xacro:arg name="vesselid" default="titoneri1"/> 
 
   <material name="blue">
     <color rgba="0 0 0.8 1"/>
