@@ -5,6 +5,13 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Dark-Blue Tito Neri1
+        - /Purple Tito Neri1
+        - /Red Tito Neri1
+        - /Orange Tito Neri1
+        - /Purple Tito Neri2
+        - /Green Tito Neri1
+        - /Yellow Tito Neri1
         - /Light-Blue Tito Neri1
       Splitter Ratio: 0.5
     Tree Height: 443
@@ -52,23 +59,23 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_DB_PS_aft_thruster:
+        PS_aft_thruster:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RAS_TN_DB_SB_aft_thruster:
+        SB_aft_thruster:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RAS_TN_DB_base_link:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
       Name: Dark-Blue Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_DB
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -90,23 +97,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_PU_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_PU_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_PU_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Purple Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_PU
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -115,67 +107,17 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        RAS_TN_DB_base_link:
+        RAS_TN_DB/PS_aft_thruster:
           Value: true
-        RAS_TN_DB_cam0:
+        RAS_TN_DB/SB_aft_thruster:
+          Value: true
+        RAS_TN_DB/base_link:
+          Value: true
+        RAS_TN_DB/cam0:
           Value: true
         RAS_TN_DB_gnss0:
           Value: true
         RAS_TN_DB_imu0:
-          Value: true
-        RAS_TN_GR_base_link:
-          Value: true
-        RAS_TN_GR_cam0:
-          Value: true
-        RAS_TN_GR_gnss0:
-          Value: true
-        RAS_TN_GR_imu0:
-          Value: true
-        RAS_TN_LB_base_link:
-          Value: true
-        RAS_TN_LB_cam0:
-          Value: true
-        RAS_TN_LB_gnss0:
-          Value: true
-        RAS_TN_LB_imu0:
-          Value: true
-        RAS_TN_OR_base_link:
-          Value: true
-        RAS_TN_OR_cam0:
-          Value: true
-        RAS_TN_OR_gnss0:
-          Value: true
-        RAS_TN_OR_imu0:
-          Value: true
-        RAS_TN_PU_base_link:
-          Value: true
-        RAS_TN_PU_cam0:
-          Value: true
-        RAS_TN_PU_gnss0:
-          Value: true
-        RAS_TN_PU_imu0:
-          Value: true
-        RAS_TN_RE_base_link:
-          Value: true
-        RAS_TN_RE_cam0:
-          Value: true
-        RAS_TN_RE_gnss0:
-          Value: true
-        RAS_TN_RE_imu0:
-          Value: true
-        RAS_TN_YE_PS_aft_thruster:
-          Value: true
-        RAS_TN_YE_SB_aft_thruster:
-          Value: true
-        RAS_TN_YE_base_link:
-          Value: true
-        RAS_TN_YE_cam0:
-          Value: true
-        RAS_TN_YE_gnss0:
-          Value: true
-        RAS_TN_YE_imu0:
-          Value: true
-        point_of_interest_1:
           Value: true
         world:
           Value: true
@@ -186,61 +128,17 @@ Visualization Manager:
       Show Names: false
       Tree:
         world:
-          RAS_TN_DB_base_link:
-            RAS_TN_DB_cam0:
+          RAS_TN_DB/base_link:
+            RAS_TN_DB/PS_aft_thruster:
+              {}
+            RAS_TN_DB/SB_aft_thruster:
+              {}
+            RAS_TN_DB/cam0:
               {}
             RAS_TN_DB_gnss0:
               {}
             RAS_TN_DB_imu0:
               {}
-          RAS_TN_GR_base_link:
-            RAS_TN_GR_cam0:
-              {}
-            RAS_TN_GR_gnss0:
-              {}
-            RAS_TN_GR_imu0:
-              {}
-          RAS_TN_LB_base_link:
-            RAS_TN_LB_cam0:
-              {}
-            RAS_TN_LB_gnss0:
-              {}
-            RAS_TN_LB_imu0:
-              {}
-          RAS_TN_OR_base_link:
-            RAS_TN_OR_cam0:
-              {}
-            RAS_TN_OR_gnss0:
-              {}
-            RAS_TN_OR_imu0:
-              {}
-          RAS_TN_PU_base_link:
-            RAS_TN_PU_cam0:
-              {}
-            RAS_TN_PU_gnss0:
-              {}
-            RAS_TN_PU_imu0:
-              {}
-          RAS_TN_RE_base_link:
-            RAS_TN_RE_cam0:
-              {}
-            RAS_TN_RE_gnss0:
-              {}
-            RAS_TN_RE_imu0:
-              {}
-          RAS_TN_YE_base_link:
-            RAS_TN_YE_PS_aft_thruster:
-              {}
-            RAS_TN_YE_SB_aft_thruster:
-              {}
-            RAS_TN_YE_cam0:
-              {}
-            RAS_TN_YE_gnss0:
-              {}
-            RAS_TN_YE_imu0:
-              {}
-          point_of_interest_1:
-            {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -261,23 +159,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_RE_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_RE_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_RE_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Red Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_RE
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -299,23 +182,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_OR_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_OR_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_OR_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Orange Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_OR
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -337,23 +205,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_PU_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_PU_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_PU_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Purple Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_PU
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -375,23 +228,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_GR_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_GR_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_GR_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Green Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_GR
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -413,23 +251,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_YE_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_YE_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_YE_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Yellow Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_YE
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -451,23 +274,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        RAS_TN_LB_PS_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_LB_SB_aft_thruster:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RAS_TN_LB_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Light-Blue Tito Neri
-      TF Prefix: ""
+      TF Prefix: RAS_TN_LB
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -486,7 +294,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 20.90978240966797
+      Distance: 38.94578170776367
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -501,10 +309,10 @@ Visualization Manager:
       Invert Z Axis: true
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3099996745586395
+      Pitch: 0.18999966979026794
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.5781633853912354
+      Yaw: 2.198153495788574
     Saved: ~
 Window Geometry:
   Displays:
