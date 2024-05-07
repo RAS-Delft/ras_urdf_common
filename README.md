@@ -11,3 +11,8 @@ The rviz folder has rviz2 settings that we found nice. To use Rviz2 the tf's and
 A transformation tree for the ship links commonly looks like this:
 ![image](https://github.com/RAS-Delft/ras_urdf_common/assets/5917472/f838ca41-b631-4983-8ea1-21f436cbda98)
 
+
+You can launch Rviz with default fleet settings , after building the package and sourcing the workspace:
+```
+ros2 launch ras_urdf_common rviz_bringup.launch.py 
+```
