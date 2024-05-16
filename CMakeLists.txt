@@ -29,7 +29,7 @@ include_directories(include)
 #)
 
 install(
-  DIRECTORY images launch meshes rviz urdf ras_urdf_common scripts
+  DIRECTORY launch meshes rviz urdf ras_urdf_common scripts
   DESTINATION share/${PROJECT_NAME}
 )
 
